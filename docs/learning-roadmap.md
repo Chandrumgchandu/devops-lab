@@ -6,22 +6,25 @@ It is not a project decision log. Project-specific decisions belong in `docs/pro
 
 ## Current Topic
 
-Milestone 0: Repository Foundation
+Milestone 1: Minimal Backend Skeleton
 
 Focus:
 
-- repository purpose
-- operating standards
-- documentation discipline
-- project memory
-- project state
-- knowledge base policy
-- milestone workflow
-- Git repository foundation
+- Spring Boot project skeleton
+- local backend execution
+- basic API endpoint
+- basic health endpoint
+- backend test discipline
 
 ## Completed Topics
 
-None yet.
+- Repository foundation
+- Operating standards
+- Project memory policy
+- Project state tracking
+- Knowledge base policy
+- Milestone workflow
+- Git repository foundation
 
 ## Pending Topics
 
@@ -63,4 +66,3 @@ None recorded yet.
 The Technical Lead maintains an internal assessment of strengths, weak areas, recurring mistakes, investigation habits, troubleshooting approach, interview readiness, and production readiness.
 
 This assessment is surfaced only when requested, during major milestone reviews, or when a recurring weakness requires intervention.
-

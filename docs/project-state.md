@@ -8,8 +8,8 @@ This file is a high-level project status dashboard. It is not a detailed roadmap
 | --- | --- |
 | Planning | Completed |
 | Architecture | Completed |
-| Repository Foundation | Current |
-| Application Skeleton | Not Started |
+| Repository Foundation | Completed |
+| Application Skeleton | Current |
 | Backend Development | Not Started |
 | Frontend Development | Not Started |
 | Database | Not Started |
@@ -22,9 +22,8 @@ This file is a high-level project status dashboard. It is not a detailed roadmap
 
 ## Current Focus
 
-Milestone 0: Repository Foundation
+Milestone 1: Minimal Backend Skeleton
 
 ## Next Phase
 
-Application Skeleton, pending explicit approval after Milestone 0 completion.
-
+Backend Development, pending explicit approval after Milestone 1 completion.

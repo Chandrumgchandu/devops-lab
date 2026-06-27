@@ -16,9 +16,9 @@ Do not duplicate project decisions in separate decision documents. When a decisi
 
 ## Current Status
 
-- Current milestone: Milestone 0 - Repository Foundation
-- Completed milestones: none
-- Next milestone: Milestone 1 - Minimal Backend Skeleton, pending explicit approval after Milestone 0 completion
+- Current milestone: Milestone 1 - Minimal Backend Skeleton
+- Completed milestones: Milestone 0 - Repository Foundation
+- Next milestone: Milestone 2 - Minimal Frontend Skeleton, pending explicit approval after Milestone 1 completion
 
 ## Major Decisions
 
@@ -185,7 +185,7 @@ Do not duplicate project decisions in separate decision documents. When a decisi
 
 ## Operational Lessons
 
-- None recorded yet.
+- Milestone 0 established that repository state must be verified before development begins. Git status, branch, remote, commit history, and tracking documents should be checked before starting a new milestone.
 
 ## Recurring Bugs and Mistakes
 
@@ -197,11 +197,10 @@ Do not duplicate project decisions in separate decision documents. When a decisi
 
 ## Future Improvements
 
-- Add application code only after Milestone 0 is complete and Milestone 1 is approved.
+- Add backend application code only after Milestone 1 discussion, architecture, plan, and approval are complete.
 - Add tool-specific documentation only when the corresponding milestone starts.
 - Expand `.gitignore` only when tool-specific milestones require it.
 
 ## Open Questions
 
 - After the official repository is reviewed and committed, decide whether to archive or permanently delete `/home/chandru_m_g/devops-lab`.
-
