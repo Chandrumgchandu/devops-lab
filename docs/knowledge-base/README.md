@@ -33,6 +33,12 @@ docs/knowledge-base/
 
 Subject directories are created only when useful. They should not be added as empty placeholders.
 
+## Available Notes
+
+- [Git Repository State Verification](git-github/repository-state-verification.md)
+- [HTTP Status Troubleshooting](networking/http-status-troubleshooting.md)
+- [Spring Boot Backend Foundation](spring-boot/backend-foundation.md)
+
 ## Note Standards
 
 Each note should be concise and interview-ready.
@@ -80,4 +86,3 @@ Update existing notes instead of creating duplicates.
 When a better approach is discovered, revise the note instead of appending contradictory information.
 
 The knowledge base should eventually support interview preparation without separate manual note-taking.
-

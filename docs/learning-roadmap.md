@@ -6,15 +6,13 @@ It is not a project decision log. Project-specific decisions belong in `docs/pro
 
 ## Current Topic
 
-Milestone 1: Minimal Backend Skeleton
+Milestone 1: Minimal Backend Skeleton - completed, pending closure commit
 
 Focus:
 
-- Spring Boot project skeleton
-- local backend execution
-- basic API endpoint
-- basic health endpoint
-- backend test discipline
+- milestone review and documentation closure
+- HTTP troubleshooting
+- distinguishing symptoms from root causes
 
 ## Completed Topics
 
@@ -25,6 +23,13 @@ Focus:
 - Knowledge base policy
 - Milestone workflow
 - Git repository foundation
+- Minimal Spring Boot project structure
+- Java 21 and Maven build lifecycle
+- Local Spring Boot execution
+- REST endpoint and JSON response verification
+- Spring Boot integration testing on a random port
+- GitHub push verification
+- HTTP 404 and context-path troubleshooting
 
 ## Pending Topics
 
@@ -51,7 +56,7 @@ Focus:
 
 ## Weak Areas Discovered
 
-None recorded yet.
+- Initial incident diagnosis identified the `404` symptom before explaining the configuration mechanism that changed the effective URL. Revisit the distinction between symptom, contributing condition, and root cause.
 
 ## Recurring Mistakes
 
@@ -59,7 +64,9 @@ None recorded yet.
 
 ## Concepts to Revisit Later
 
-None recorded yet.
+- HTTP status-code triage when NGINX and authentication are introduced
+- Spring Boot context paths versus reverse-proxy path routing
+- Runtime configuration precedence
 
 ## Progress Assessment Policy
 

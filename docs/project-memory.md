@@ -16,8 +16,8 @@ Do not duplicate project decisions in separate decision documents. When a decisi
 
 ## Current Status
 
-- Current milestone: Milestone 1 - Minimal Backend Skeleton
-- Completed milestones: Milestone 0 - Repository Foundation
+- Current milestone: Milestone 1 - Minimal Backend Skeleton completed, pending closure commit
+- Completed milestones: Milestone 0 - Repository Foundation; Milestone 1 - Minimal Backend Skeleton
 - Next milestone: Milestone 2 - Minimal Frontend Skeleton, pending explicit approval after Milestone 1 completion
 
 ## Major Decisions
@@ -129,8 +129,8 @@ Do not duplicate project decisions in separate decision documents. When a decisi
 - Alternatives Considered: Leave directories untracked; add README files inside each directory.
 - Trade-offs: `.gitkeep` files are implementation details with no application meaning, but they preserve the approved structure without introducing code.
 - Date: 2026-06-27
-- Current Status: Active
-- Superseded By: Not applicable
+- Current Status: Partially superseded. `frontend/.gitkeep` remains active; `backend/.gitkeep` was removed when backend source files made it unnecessary.
+- Superseded By: Decision 15 for the backend boundary
 
 ### Decision 12: Add Minimal Root `.gitignore`
 
@@ -162,11 +162,32 @@ Do not duplicate project decisions in separate decision documents. When a decisi
 - Current Status: Active
 - Superseded By: Not applicable
 
+### Decision 15: Use a Minimal Spring Boot Backend Contract
+
+- Decision: Use Java 21, Spring Boot 4.1.0, Maven, and package namespace `com.chandru.devopslab`; expose only `GET /api/incidents/summary` with an in-memory response during Milestone 1.
+- Reason: This creates the smallest deployable and testable backend artifact needed for later operational work without introducing persistence or observability prematurely.
+- Alternatives Considered: Add PostgreSQL and JPA immediately; add a custom health endpoint; use Spring Boot Actuator in Milestone 1.
+- Trade-offs: The endpoint has no persistence and limited business value, but it provides a stable HTTP contract for build, deployment, proxy, monitoring, and troubleshooting exercises. Operational health will use Actuator in a later milestone.
+- Date: 2026-06-27
+- Current Status: Active
+- Superseded By: Not applicable
+
+### Decision 16: Complete Approved Scope Before Learner Handoff
+
+- Decision: After implementation scope is approved, the Technical Lead completes implementation, review, and automated verification before providing exact local test and GitHub push commands to the learner.
+- Reason: The learner should receive a coherent, reviewed change while still practicing local verification, Git review, commit, and push.
+- Alternatives Considered: Require approval before every individual file; allow the Technical Lead to commit and push automatically.
+- Trade-offs: End-to-end implementation reduces interruption but gives fewer file-by-file approval points. Keeping local verification and Git operations with the learner preserves hands-on ownership.
+- Date: 2026-06-27
+- Current Status: Active
+- Superseded By: Not applicable
+
 ## Repository Conventions
 
 - Keep the root small.
 - Add only milestone-approved files and directories.
-- Preserve empty `frontend/` and `backend/` boundaries with `.gitkeep` during Milestone 0.
+- Preserve an empty boundary with `.gitkeep` only until tracked files make the placeholder unnecessary.
+- Use `com.chandru.devopslab` as the backend base package.
 - Do not add Docker, CI/CD, Terraform, Kubernetes, monitoring, or infrastructure files before their milestones.
 - Use concise Markdown for documentation.
 - Review existing artifacts before reuse.
@@ -186,6 +207,9 @@ Do not duplicate project decisions in separate decision documents. When a decisi
 ## Operational Lessons
 
 - Milestone 0 established that repository state must be verified before development begins. Git status, branch, remote, commit history, and tracking documents should be checked before starting a new milestone.
+- Milestone 1 demonstrated that an application can start successfully while its published endpoint still returns `404`. Effective routing is composed from server-level path configuration and controller mappings.
+- Incident diagnosis must move beyond the status-code symptom. The useful root cause explains the exact change, why it altered runtime behavior, and why the selected correction restores the approved contract.
+- Compare the working tree with the last known-good commit early when an incident follows a configuration change.
 
 ## Recurring Bugs and Mistakes
 
@@ -197,7 +221,8 @@ Do not duplicate project decisions in separate decision documents. When a decisi
 
 ## Future Improvements
 
-- Add backend application code only after Milestone 1 discussion, architecture, plan, and approval are complete.
+- Replace the in-memory incident summary only when a later database milestone requires persistence.
+- Add Spring Boot Actuator in its approved observability milestone instead of maintaining a custom health endpoint.
 - Add tool-specific documentation only when the corresponding milestone starts.
 - Expand `.gitignore` only when tool-specific milestones require it.
 

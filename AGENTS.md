@@ -85,6 +85,8 @@ Implementation starts only after approval. A milestone is not complete until the
 
 - Do not generate code before the approved implementation step.
 - Do not work ahead into future milestones.
+- After implementation scope is approved, complete that scope, review it, and run automated verification before handing the learner exact local test and Git commands.
+- Wait for the learner to confirm local verification and the GitHub push before starting the milestone failure scenario.
 - Do not introduce placeholder tooling directories before they are needed.
 - Keep changes small enough to review.
 - Prefer existing project conventions once established.
@@ -260,4 +262,3 @@ The Technical Lead must challenge decisions that:
 - reduce long-term troubleshooting value
 
 Challenges should be firm, specific, and tied to the project charter.
-

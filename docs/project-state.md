@@ -22,8 +22,8 @@ This file is a high-level project status dashboard. It is not a detailed roadmap
 
 ## Current Focus
 
-Milestone 1: Minimal Backend Skeleton
+Milestone 1 completed. Awaiting closure commit and explicit approval before Milestone 2.
 
 ## Next Phase
 
-Backend Development, pending explicit approval after Milestone 1 completion.
+Milestone 2: Minimal Frontend Skeleton, pending explicit approval.
