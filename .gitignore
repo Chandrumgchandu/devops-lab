@@ -1,0 +1,15 @@
+# Minimal repository-level ignores.
+# Tool-specific rules are added only when their milestones introduce those tools.
+
+.DS_Store
+Thumbs.db
+
+*.log
+
+.env
+.env.*
+!.env.example
+
+.idea/
+.vscode/
+
