@@ -13,3 +13,5 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Maven build output.
+backend/target/
