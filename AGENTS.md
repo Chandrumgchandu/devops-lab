@@ -137,6 +137,8 @@ The knowledge base teaches transferable DevOps concepts. Notes should be organiz
 
 Create or update notes when a milestone, concept, investigation, incident, or production issue creates durable long-term learning value.
 
+Do not exclude a concept merely because it is small. From basic Linux through Kubernetes, document it when it has durable DevOps, interview, production, or troubleshooting value. Keep the explanation concise and suitable for long-term revision.
+
 Notes should generally distinguish:
 
 - concept
